@@ -59,6 +59,7 @@ body {
   /* identical to box height, or 140% */
   color: #333333;
 }
+
 #hey {
   font-family: Roboto;
   font-style: normal;
@@ -78,6 +79,7 @@ body {
   /* identical to box height, or 183% */
   color: #333333;
 }
+
 .reveal-if-active {
   opacity: 0;
   max-height: 0;
@@ -87,15 +89,16 @@ body {
   transform: scale(0.8);
   -webkit-transition: 0.5s;
   transition: 0.5s;
- 
 }
 .reveal-if-active label {
   display: block;
   margin: 0 0 3px 0;
 }
+
 .reveal-if-active input[type=text] {
   width: 100%;
-  }
+}
+
 input[type="radio"]:checked ~ .reveal-if-active, input[type="checkbox"]:checked ~ .reveal-if-active {
   opacity: 1;
   max-height: fit-content;
@@ -152,7 +155,6 @@ input[type="radio"]:checked ~ .reveal-if-active, input[type="checkbox"]:checked 
   font-size: 16px;
   line-height: 22px;
   /* identical to box height, or 137% */
-
   padding: 0.5rem;
   color: #ABABAB;
 
@@ -175,37 +177,72 @@ input[type="radio"]:checked ~ .reveal-if-active, input[type="checkbox"]:checked 
 }
 
 .response {
-  padding:5%;  
-  width: 80%;
-  height: 225px;
   background: #F8F8F8;
   border-radius: 20px;
-  
+  padding: 40px;
+  width: 620px; 
 }
 
 .response-block {
-  
-  width: 37.5rem;
-  height: 113px;
-  left: 177px;
-  
+  display: grid;
+  grid-template-columns: 50px 125px 125px 125px 125px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "item-a  item-b item-b item-c item-d"
+    "item-a item-e item-e item-e item-e"
+    " . item-f item-f . item-g";
 }
 
-#jokeid {
-  justify-content: center;
-  display: inline-block;
+.item-a {
+  grid-area: item-a;
+  justify-self: start;
+}
+.item-b {
+  grid-area: item-b;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 10px;
   line-height: 14px;
   /* identical to box height, or 140% */
+  justify-self: end;
+  align-self: start;
+
   color: #ABABAB;
-  margin-top: 0rem;
 }
 
-#data {
-  padding-top: 1rem;
-  padding-left: 5%; 
+.item-c {
+  grid-area: item-c;
+  justify-self: start;
+}
+
+.item-d {
+  grid-area: item-d;
+  justify-self: end;
+}
+
+.item-g {
+  grid-area: item-g;
+  align-self: end;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  /* or 140% */
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #333333;
+  background-color: white;
+  border-radius: 6px;
+
+}
+
+.item-e {
+  grid-area: item-e;
+  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -213,19 +250,12 @@ input[type="radio"]:checked ~ .reveal-if-active, input[type="checkbox"]:checked 
   /* or 144% */
 
 
-  color: #333333;
-
-}
-#divimg {
-  display: inline-block;
-  
+color: #333333;
 }
 
-#favicon {
-  right:0px;
-}
-
-#update {
+.item-f {
+  grid-area: item-f;
+  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -234,14 +264,4 @@ input[type="radio"]:checked ~ .reveal-if-active, input[type="checkbox"]:checked 
 
 
   color: #ABABAB;
-
 }
-
-#category {
-  background: #F8F8F8;
-  border-radius: 20px;
-  display: inline-block;
-}
-
-
-

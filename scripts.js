@@ -35,11 +35,12 @@ function jokeBySearch() {
     var xmlhttp = new XMLHttpRequest();  
     var query = document.getElementById("search").value;
     var url = `https://api.chucknorris.io/jokes/search?query=${query}`;
+    
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var json = JSON.parse(this.responseText);
             // We parse the JSON response
-            parseJson(json);
+            parseJson(json[0]);
         }
     };
     xmlhttp.open("GET", url, true);
@@ -50,10 +51,10 @@ function parseJson(json) {
     var fact = "<b>" + json["value"] + "</b>";
     document.getElementById("data").innerHTML = fact;
 
-    var fact_id = "<b>ID:" + json["id"] + "</b>";
+    var fact_id = "<b>ID:" + json["id"] + "</b>";   
     document.getElementById("jokeid").innerHTML = fact_id;
 
-    var cat = `<b>Category: ${json["categories"]}</b>`;
+    var cat = `<b>${json["categories"]}</b>`;
     if (cat.length > 17) {
         document.getElementById("category").innerHTML = cat;
     } else {
@@ -65,6 +66,10 @@ function parseJson(json) {
     var update = `<b>Last updated ${Math.round((today - date) / (1000 * 3600))} hours ago</b>`;
     document.getElementById("update").innerHTML = update;
 }
+
+function parseJsonArray(json) {
+
+};
 
 function getCategories() {
     // We call the Web Service via AJAX
@@ -147,6 +152,8 @@ function reply_click()
     categoryName = btn.textContent;
 
 };
+
+
 
 getCategories();
 randomFact();
