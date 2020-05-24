@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chuck Norris joke</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="inner">
+      <p id="msi">MSI 2020</p>
+      
+      <div>
+        <h1 id="hey">Hey!</h1>
+        <h2 id="lets">Let's find a joke for you!</h2>
+      </div>
+      <section>
+        <div>
+          <input class="radioinput" type="radio" id="choise-jokes-random" name="choise-jokes" checked>
+          <label for="radio1">Random</label><br>
+        </div> 
+        <div>
+          <input class="radioinput" type="radio" id="choise-jokes-category" name="choise-jokes" required>
+          <label for="choise-jokes-category">By category</label><br>
+          <div class="reveal-if-active"  data-require-pair="#choise-jokes-category">
+            <div class="require-if-active" id="all_categories"></div>
+          </div>
+        </div>
+        <div>
+          <input class="radioinput" type="radio" id="choise-jokes-search" name="choise-jokes">
+          <label for="choise-jokes-search">Search</label><br>
+          <div class="reveal-if-active">
+            <input id="search" placeholder="Free text search..." type="text" name="search-joke" class="require-if-active" data-require-pair="#choise-jokes-search">
+          </div>
+          <button type="button" id="btn">Get a joke</button>
+        </div>
+      </section>
+
+      <section class="response"> 
+        <div class="response-block">
+          <div id="divimg"><img id="msgimg" src="images/message.png"></div>
+          <div id="jokeid"></div>
+          <img id="linkimg" src="images/link.png">
+          <img id="favicon" src="images/favorite.png">
+          <div id="data"></div>
+          
+          <div id="update"></div>
+          <div id="category"></div>
+          <script stype="text/javascript" src="scripts.js"></script>
+        </div>
+        
+      </section>
+    </div>
+  <div class="sidebar"></div>  
+  </div>
+  
+</body>
+
+</html>

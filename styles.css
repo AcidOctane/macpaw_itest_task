@@ -1,0 +1,247 @@
+:root {
+    --background_color_one: #FFFFFF;
+    --background_color_two: #F8F8F8;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+  background-color: var(--background_color_one);
+  min-height: 10rem;
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+}
+
+.inner {
+  position: absolute;
+  width: 66%;
+  height: 720px;
+  left: 10%;
+  top: 2rem;
+}
+
+.sidebar {
+  position: absolute;
+  height: 100%;
+  left: 66%;
+  top: 0px;
+  right:0px;
+  background: #F8F8F8;
+}
+
+#msi { 
+  width: 5.4375rem;
+  height: 1.75rem;
+  left: 8.5625rem;
+  top: 2.375rem;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+  color: #333333;
+}
+#hey {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  /* identical to box height, or 137% */
+  color: #333333;
+}
+
+#lets {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 44px;
+  /* identical to box height, or 183% */
+  color: #333333;
+}
+.reveal-if-active {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 16px;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+ 
+}
+.reveal-if-active label {
+  display: block;
+  margin: 0 0 3px 0;
+}
+.reveal-if-active input[type=text] {
+  width: 100%;
+  }
+input[type="radio"]:checked ~ .reveal-if-active, input[type="checkbox"]:checked ~ .reveal-if-active {
+  opacity: 1;
+  max-height: fit-content;
+  padding: 10px 20px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  overflow: visible;
+}
+  
+  
+.require-if-active button {
+  background-color: #ffffff; /*  background */
+  color: #ABABAB; /*  text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  display: inline; /* Make the buttons appear below each other */
+  text-align: center;
+  border: 2px solid #F8F8F8;
+  border-radius: 6px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  max-height: 200px;
+  margin: 0.1rem;
+}
+  
+/* Add a background color on hover */
+.require-if-active button:hover {
+  
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 0.5;
+}  
+.require-if-active button:active {
+  background: #F8F8F8;
+  border: 2px solid #F8F8F8;
+  color: black;
+}
+
+.radioinput {
+  width: 1.125rem;
+  height: 1.125rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+#search {
+  width: 680px;
+  height: 42px;
+  border: 2px solid #333333;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height, or 137% */
+
+  padding: 0.5rem;
+  color: #ABABAB;
+
+}
+
+#btn {
+  width: 152px;
+  height: 42px;
+  background: linear-gradient(92.01deg, #8EA7FF 0%, #7291FF 100%);
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  border:0px;
+  /* identical to box height, or 137% */
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+
+  color: #FFFFFF;
+}
+
+.response {
+  padding:5%;  
+  width: 80%;
+  height: 225px;
+  background: #F8F8F8;
+  border-radius: 20px;
+  
+}
+
+.response-block {
+  
+  width: 37.5rem;
+  height: 113px;
+  left: 177px;
+  
+}
+
+#jokeid {
+  justify-content: center;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  /* identical to box height, or 140% */
+  color: #ABABAB;
+  margin-top: 0rem;
+}
+
+#data {
+  padding-top: 1rem;
+  padding-left: 5%; 
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  /* or 144% */
+
+
+  color: #333333;
+
+}
+#divimg {
+  display: inline-block;
+  
+}
+
+#favicon {
+  right:0px;
+}
+
+#update {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  /* identical to box height, or 140% */
+
+
+  color: #ABABAB;
+
+}
+
+#category {
+  background: #F8F8F8;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+
+
